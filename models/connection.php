@@ -12,9 +12,9 @@ class Connection{
 
 		$infoDB = array(
 
-			"database" => "localhost",
-			"user" => "root",
-			"pass" => ""
+			"database" => "paurob860-ecommerce",
+			"user" => "root", // FALTA ACTUALIZAR ESTA INFO
+			"pass" => "" // FALTA ACTUALIZAR ESTA INFO
 
 		);
 
@@ -37,7 +37,7 @@ class Connection{
 	=============================================*/
 	
 	static public function publicAccess(){
-	    return ["categories", "products", "	admins", "carts", "orders"]; 
+	    return ["categories", "products", "admins", "carts", "orders"]; 
 	}
 
 	/*=============================================
@@ -50,9 +50,9 @@ class Connection{
 		try{
 
 			$link = new PDO(
-				"mysql:host=localhost;dbname=".Connection::infoDatabase()["database"],
-				Connection::infoDatabase()["user"], 
-				Connection::infoDatabase()["pass"]
+				"mysql:host=localhost;dbname=".Connection::infoDatabase()["database"], // FALTA ACTUALIZAR ESTA INFO
+				Connection::infoDatabase()["user"], // FALTA ACTUALIZAR ESTA INFO
+				Connection::infoDatabase()["pass"] // FALTA ACTUALIZAR ESTA INFO
 			);
 
 			$link->exec("set names utf8");
